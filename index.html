@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湖南宏通复盛节能科技有限公司 - 专业节能解决方案提供商</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1E6FBA;
+            --secondary-color: #4CAF50;
+            --accent-color: #FF6D00;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x600') center/cover no-repeat;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .feature-box {
+            padding: 30px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 50px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: all 0.3s;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #155a8a;
+            border-color: #155a8a;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            background-color: #e05d00;
+            border-color: #e05d00;
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+        }
+        
+        .floating-contact .btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://via.placeholder.com/150x50" alt="湖南宏通复盛节能科技" height="30" class="d-inline-block align-top me-2">
+                湖南宏通复盛节能科技
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">关于我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">产品中心</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cases.html">案例展示</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">新闻资讯</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">联系我们</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center ms-3">
+                    <i class="fas fa-phone-alt text-primary me-2"></i>
+                    <span class="fw-bold">0731-XXXXXXX</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页轮播图 -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero-section">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold mb-4">专业节能解决方案提供商</h1>
+                        <p class="lead mb-5">致力于为客户提供高效、可靠的节能产品和技术服务</p>
+                        <a href="products.html" class="btn btn-primary btn-lg me-2">查看产品</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">联系我们</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-section" style="background-image: url('https://via.placeholder.com/1920x600')">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold mb-4">创新节能技术</h1>
+                        <p class="lead mb-5">节能效率提升30%-50%，助力企业绿色发展</p>
+                        <a href="cases.html" class="btn btn-accent btn-lg">查看案例</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-section" style="background-image: url('https://via.placeholder.com/1920x600')">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold mb-4">专业团队服务</h1>
+                        <p class="lead mb-5">10年行业经验，服务超过500家企业</p>
+                        <a href="about.html" class="btn btn-primary btn-lg">了解我们</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- 公司简介 -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title">公司简介</h2>
+                    <p class="lead">湖南宏通复盛节能科技有限公司成立于2010年，是一家专注于工业节能、建筑节能和环保技术研发与应用的高新技术企业。</p>
+                    <p>公司拥有自主知识产权的核心节能技术，已为全国超过500家企业提供节能解决方案，累计为客户节约能源成本超过2亿元。</p>
+                    <div class="row mt-4">
+                        <div class="col-4 text-center">
+                            <h3 class="text-primary fw-bold">10+</h3>
+                            <p>年行业经验</p>
+                        </div>
+                        <div class="col-4 text-center">
+                            <h3 class="text-primary fw-bold">500+</h3>
+                            <p>服务客户</p>
+                        </div>
+                        <div class="col-4 text-center">
+                            <h3 class="text-primary fw-bold">30%</h3>
+                            <p>平均节能率</p>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-outline-primary mt-3">了解更多</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/600x400" alt="公司简介" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">我们的优势</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>专业技术</h3>
+                        <p>拥有10余项节能专利技术，自主研发的节能系统效率行业领先。</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>经验团队</h3>
+                        <p>由多名节能领域专家组成的团队，平均行业经验超过8年。</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>品质保证</h3>
+                        <p>ISO9001质量管理体系认证，产品通过国家节能认证。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">产品中心</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="节能产品1">
+                        <div class="card-body">
+                            <h5 class="card-title">螺杆空压机</h5>
+                            <p class="card-text">采用先进电磁设计，能效等级达到IE4标准，节能效果显著。</p>
+                            <a href="product-detail.html" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="节能产品2">
+                        <div class="card-body">
+                            <h5 class="card-title">螺杆风机</h5>
+                            <p class="card-text">精准控制电机转速，实现按需供能，节能率可达40%。</p>
+                            <a href="product-detail.html" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="节能产品3">
+                        <div class="card-body">
+                            <h5 class="card-title">螺杆真空泵</h5>
+                            <p class="card-text">回收工业废热，转化为可用能源，综合节能效益显著。</p>
+                            <a href="product-detail.html" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="products.html" class="btn btn-accent btn-lg">浏览全部产品</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">成功案例</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="案例1">
+                        <div class="card-body">
+                            <h5 class="card-title">湖南某制造企业节能改造</h5>
+                            <p class="card-text">通过安装我司高效节能电机和智能控制系统，年节约电费120万元。</p>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <small class="text-muted">2022年5月完成</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="案例2">
+                        <div class="card-body">
+                            <h5 class="card-title">湖北某化工厂余热回收项目</h5>
+                            <p class="card-text">利用我司余热回收系统，每年回收热能价值超过200万元。</p>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <small class="text-muted">2021年11月完成</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="案例3">
+                        <div class="card-body">
+                            <h5 class="card-title">广东某商业综合体节能工程</h5>
+                            <p class="card-text">综合应用多种节能技术，整体节能率达到35%。</p>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <small class="text-muted">2023年3月完成</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们CTA -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">需要专业的节能解决方案？</h2>
+            <p class="lead mb-5">我们的专家团队将为您提供免费咨询和定制化服务</p>
+            <a href="contact.html" class="btn btn-light btn-lg me-3">立即咨询</a>
+            <a href="tel:0731-XXXXXXX" class="btn btn-outline-light btn-lg"><i class="fas fa-phone-alt me-2"></i> 0731-XXXXXXX</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-4">湖南宏通复盛节能科技有限公司</h5>
+                    <p>致力于为客户提供高效、可靠的节能产品和技术服务，助力企业实现绿色发展和节能减排目标。</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-4">快速链接</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white">首页</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white">关于我们</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-white">产品中心</a></li>
+                        <li class="mb-2"><a href="cases.html" class="text-white">案例展示</a></li>
+                        <li class="mb-2"><a href="news.html" class="text-white">新闻资讯</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-4">产品分类</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white">高效节能电机</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">智能变频控制系统</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">余热回收系统</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">能源管理系统</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">节能照明系统</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="mb-4">联系我们</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 湖南省长沙市XX区XX路XX号</p>
+                        <p><i class="fas fa-phone-alt"></i> 0731-XXXXXXX</p>
+                        <p><i class="fas fa-envelope"></i> service@hongtongfs.com</p>
+                        <p><i class="fas fa-clock"></i> 周一至周五: 8:30 - 17:30</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">© 2023 湖南宏通复盛节能科技有限公司 版权所有</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">湘ICP备XXXXXXXX号</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 浮动联系按钮 -->
+    <div class="floating-contact">
+        <a href="tel:0731-XXXXXXX" class="btn btn-accent d-flex align-items-center justify-content-center">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 激活轮播图自动播放
+        var myCarousel = document.querySelector('#mainCarousel')
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 5000,
+            wrap: true
+        })
+        
+        // 滚动时导航栏效果
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.querySelector('.navbar').classList.add('shadow-sm')
+                document.querySelector('.navbar').classList.add('bg-white')
+            } else {
+                document.querySelector('.navbar').classList.remove('shadow-sm')
+                document.querySelector('.navbar').classList.remove('bg-white')
+            }
+        })
+    </script>
+</body>
+</html>
