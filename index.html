@@ -7,826 +7,330 @@
     <title>湖南宏通复盛节能科技有限公司 - 专业节能解决方案提供商</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #1E6FBA;
-            --secondary-color: #4CAF50;
-            --accent-color: #FF6D00;
-        }
-
-        body {
-            font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
-        }
-
-        .navbar {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar-brand {
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/image/BG08HFBnQA2D57hWkjujFA.webp') center/cover no-repeat;
-            color: white;
-            padding: 120px 0;
-            text-align: center;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-        }
-
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 80px 0;
-                min-height: 400px;
-            }
-        }
-
-        .section-title {
-            position: relative;
-            margin-bottom: 40px;
-            color: var(--primary-color);
-        }
-
-        .section-title:after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent-color);
-        }
-
-        /* 产品卡片样式 */
-        .product-card {
-            border: none;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            background: white;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .product-card-img {
-            height: 220px;
-            object-fit: contain;
-            background: #f8f9fa;
-            padding: 20px;
-        }
-
-        .product-card-body {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-
-        .product-card-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .product-card-text {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            min-height: 60px;
-        }
-
-        /* 新闻列表样式 - 国企风格 */
-        .news-section {
-            padding: 60px 0;
-            background-color: #f9f9f9;
-        }
-
-        .news-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .news-item {
-            padding: 15px 0;
-            border-bottom: 1px solid #e0e0e0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .news-item:last-child {
-            border-bottom: none;
-        }
-
-        .news-title {
-            font-size: 1rem;
-            color: #333;
-            flex: 1;
-            margin-right: 20px;
-            font-weight: normal;
-        }
-
-        .news-title:hover {
-            color: var(--primary-color);
-            text-decoration: underline;
-        }
-
-        .news-date {
-            font-size: 0.85rem;
-            color: #999;
-            width: 100px;
-            text-align: right;
-        }
-
-        .more-news {
-            text-align: right;
-            margin-top: 20px;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        .btn-accent {
-            background-color: var(--accent-color);
-            border-color: var(--accent-color);
-            color: white;
-        }
-
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 50px 0 20px;
-        }
-
-        .floating-contact {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 99;
-        }
-
-        .floating-contact .btn {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            font-size: 24px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* 轮播图自适应调整 */
-        .carousel-item {
-            min-height: 600px;
-        }
-
-        @media (max-width: 768px) {
-            .carousel-item {
-                min-height: 400px;
-            }
-
-            .news-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .news-date {
-                text-align: left;
-                margin-top: 5px;
-            }
-        }
-
-        /**/
-        :root {
-            --primary-color: #2c7be5;
-            --accent-color: #ff6b6b;
-            --font-title: 'Helvetica Neue', Arial, sans-serif;
-            --font-main: 'Segoe UI', Roboto, sans-serif;
-        }
-
-        body {
-            font-family: var(--font-main);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-            box-sizing: border-box;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        /* 新闻栏目主体样式 */
-        .news-columns {
-            padding: 40px 0;
-            background-color: #f9f9f9;
-        }
-
-        .news-column-container {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            border: 1px solid #e0e0e0;
-            height: 100%;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .news-column-title {
-            font-family: var(--font-title);
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            border-left: 4px solid var(--accent-color);
-            padding-left: 12px;
-            margin: 0 0 15px 0;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-
-        /* 等高布局 */
-        .row-equal-height {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -10px;
-        }
-
-        .row-equal-height>[class*='col-'] {
-            display: flex;
-            flex-direction: column;
-            padding: 0 10px;
-            margin-bottom: 20px;
-        }
-
-        .col-md-4 {
-            flex: 0 0 33.333333%;
-            max-width: 33.333333%;
-        }
-
-        /* 新闻项通用样式 */
-        .news-list {
-            flex: 1;
-        }
-
-        .news-item {
-            padding: 12px 0;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            align-items: flex-start;
-            transition: all 0.2s ease;
-        }
-
-        .news-item:hover {
-            background-color: #fafafa;
-        }
-
-        .news-item.with-image {
-            gap: 12px;
-        }
-
-        .news-image {
-            flex: 0 0 80px;
-            height: 60px;
-            overflow: hidden;
-            border-radius: 4px;
-            background: #eee;
-        }
-
-        .news-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .news-item:hover .news-image img {
-            transform: scale(1.05);
-        }
-
-        .news-content {
-            flex: 1;
-        }
-
-        .news-title {
-            font-size: 0.95rem;
-            color: #333;
-            display: block;
-            margin-bottom: 5px;
-            line-height: 1.5;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .news-title:hover {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .news-date {
-            font-size: 0.8rem;
-            color: #777;
-            display: block;
-            font-family: var(--font-main);
-        }
-
-        /* 第三列特殊样式 */
-        .third-column-content {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sub-section {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sub-section.with-border {
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 15px;
-            margin-bottom: 15px;
-        }
-
-        /* 更多链接 */
-        .more-link {
-            text-align: right;
-            margin-top: 15px;
-            padding-top: 10px;
-            border-top: 1px solid #f0f0f0;
-        }
-
-        .more-link a {
-            font-size: 0.9rem;
-            color: var(--primary-color);
-            font-family: var(--font-main);
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .more-link a:hover {
-            text-decoration: underline;
-        }
-
-        .more-link i {
-            margin-left: 5px;
-            font-size: 0.8rem;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .row-equal-height {
-                display: block;
-            }
-
-            .col-md-4 {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-
-            .row-equal-height>[class*='col-'] {
-                margin-bottom: 20px;
-                padding: 0;
-            }
-
-            .news-item.with-image {
-                flex-direction: column;
-            }
-
-            .news-image {
-                width: 100%;
-                margin-bottom: 10px;
-                flex: 0 0 auto;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/common.css">
 </head>
 
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="https://via.placeholder.com/150x50" alt="湖南宏通复盛节能科技" height="30"
-                    class="d-inline-block align-top me-2">
-                湖南宏通复盛节能科技
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+    <div id="header-placeholder"></div>
+    <main>
+        <!-- 首页轮播图 -->
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero-section"
+                        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/image/1.png')">
+                        <div class="container">
+                            <h1 class="display-4 fw-bold mb-4">专业节能解决方案提供商</h1>
+                            <p class="lead mb-5">致力于为客户提供高效、可靠的节能产品和技术服务</p>
+                            <a href="products.html" class="btn btn-primary btn-lg me-2">查看产品</a>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-section"
+                        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/image/_tFRxA1oRketdFICW4u4nA.webp')">
+                        <div class="container">
+                            <h1 class="display-4 fw-bold mb-4">创新节能技术</h1>
+                            <p class="lead mb-5">节能效率提升30%-50%，助力企业绿色发展</p>
+                            <a href="cases.html" class="btn btn-accent btn-lg">查看案例</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-section"
+                        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/image/BG08HFBnQA2D57hWkjujFA.webp')">
+                        <div class="container">
+                            <h1 class="display-4 fw-bold mb-4">专业团队服务</h1>
+                            <p class="lead mb-5">10年行业经验，服务超过500家企业</p>
+                            <a href="about.html" class="btn btn-primary btn-lg">了解我们</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">首页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">关于我们</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">产品中心</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">新闻资讯</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">联系我们</a>
-                    </li>
-                </ul>
-                <div class="d-flex align-items-center ms-3">
-                    <i class="fas fa-phone-alt text-primary me-2"></i>
-                    <span class="fw-bold">4000-588-600</span>
-                </div>
-            </div>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-    </nav>
 
-    <!-- 首页轮播图 -->
-    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="hero-section"
-                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/image/1.png')">
-                    <div class="container">
-                        <h1 class="display-4 fw-bold mb-4">专业节能解决方案提供商</h1>
-                        <p class="lead mb-5">致力于为客户提供高效、可靠的节能产品和技术服务</p>
-                        <a href="products.html" class="btn btn-primary btn-lg me-2">查看产品</a>
-                        <a href="contact.html" class="btn btn-outline-light btn-lg">联系我们</a>
+        <!-- 公司简介 -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="section-title">公司简介</h2>
+                        <p class="lead">湖南宏通复盛节能科技有限公司成立于1953年，复盛公司始终秉承持有"创新改革，追求卓越的产品与服务"的理念，从设计的最佳化、过程的合理化及服务的快速化，均
+                            一丝不苟地运用ISO9001及精益制造的精神。
+                        </p>
+                        <p>公司坚信"品质看得见，过程是关键"，制造出符合顾客需求的产品，让产品行销世界60余国，深受各行业用户的赞誉与信赖，同时创造出更高的价值。
+                            多元化，国际化及顾客导向，使我们的策略从空气及冷媒压缩机，高尔夫球头到电子产业，乃至贸易及环保。而推展国际行销网是发展的重点，我们再中国台湾和大陆
+                            （北京、上海、中山）、越南】美国（匹兹堡，圣路易斯）、德国、西班牙、印度等地都有生产基地，并在泰国、马来西亚和印尼等国设立了分公司。复盛的授权经销商
+                            更是遍布全球，能够及时为我们尊贵的用户提供更高品质的服务。
+                            一直以来，复盛不断追求卓越，以获得更高的产品及服务品质，从而满足客户的需求，让这份期许带给人们更过的复制，主力产业优化，改善环境生态，
+                            丰富你我人生。
+                        </p>
+                        <div class="row mt-4">
+                            <div class="col-4 text-center">
+                                <h3 class="text-primary fw-bold">10+</h3>
+                                <p>年行业经验</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <h3 class="text-primary fw-bold">60+</h3>
+                                <p>外销国家</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <h3 class="text-primary fw-bold">30%</h3>
+                                <p>平均节能率</p>
+                            </div>
+                        </div>
+                        <a href="about.html" class="btn btn-outline-primary mt-3">了解更多</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="assets/image/pro.jpg" alt="公司简介" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="hero-section"
-                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/image/_tFRxA1oRketdFICW4u4nA.webp')">
-                    <div class="container">
-                        <h1 class="display-4 fw-bold mb-4">创新节能技术</h1>
-                        <p class="lead mb-5">节能效率提升30%-50%，助力企业绿色发展</p>
-                        <a href="cases.html" class="btn btn-accent btn-lg">查看案例</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="hero-section"
-                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/image/BG08HFBnQA2D57hWkjujFA.webp')">
-                    <div class="container">
-                        <h1 class="display-4 fw-bold mb-4">专业团队服务</h1>
-                        <p class="lead mb-5">10年行业经验，服务超过500家企业</p>
-                        <a href="about.html" class="btn btn-primary btn-lg">了解我们</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
+        </section>
 
-    <!-- 公司简介 -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="section-title">公司简介</h2>
-                    <p class="lead">湖南宏通复盛节能科技有限公司成立于1953年，复盛公司始终秉承持有"创新改革，追求卓越的产品与服务"的理念，从设计的最佳化、过程的合理化及服务的快速化，均
-                        一丝不苟地运用ISO9001及精益制造的精神。
-                    </p>
-                    <p>公司坚信"品质看得见，过程是关键"，制造出符合顾客需求的产品，让产品行销世界60余国，深受各行业用户的赞誉与信赖，同时创造出更高的价值。
-                        多元化，国际化及顾客导向，使我们的策略从空气及冷媒压缩机，高尔夫球头到电子产业，乃至贸易及环保。而推展国际行销网是发展的重点，我们再中国台湾和大陆
-                        （北京、上海、中山）、越南】美国（匹兹堡，圣路易斯）、德国、西班牙、印度等地都有生产基地，并在泰国、马来西亚和印尼等国设立了分公司。复盛的授权经销商
-                        更是遍布全球，能够及时为我们尊贵的用户提供更高品质的服务。
-                        一直以来，复盛不断追求卓越，以获得更高的产品及服务品质，从而满足客户的需求，让这份期许带给人们更过的复制，主力产业优化，改善环境生态，
-                        丰富你我人生。
-                    </p>
-                    <div class="row mt-4">
-                        <div class="col-4 text-center">
-                            <h3 class="text-primary fw-bold">10+</h3>
-                            <p>年行业经验</p>
-                        </div>
-                        <div class="col-4 text-center">
-                            <h3 class="text-primary fw-bold">60+</h3>
-                            <p>外销国家</p>
-                        </div>
-                        <div class="col-4 text-center">
-                            <h3 class="text-primary fw-bold">30%</h3>
-                            <p>平均节能率</p>
+        <!-- 产品展示 -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">产品中心</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="product-card">
+                            <img src="assets/image/Air_Compressor__去背圖_.png" class="card-img-top product-card-img"
+                                alt="节能产品1">
+                            <div class="product-card-body">
+                                <h5 class="product-card-title">SWTII-SWTIII系列无油螺杆空压机</h5>
+                                <p class="product-card-text">采用先进电磁设计，能效等级达到IE4标准，节能效果显著。</p>
+                                <a href="product-detail.html" class="btn btn-primary w-100">查看详情</a>
+                            </div>
                         </div>
                     </div>
-                    <a href="about.html" class="btn btn-outline-primary mt-3">了解更多</a>
+                    <div class="col-md-4">
+                        <div class="product-card">
+                            <img src="assets/image/RENTAL_BWV01__去背圖_002.png" class="card-img-top product-card-img"
+                                alt="节能产品2">
+                            <div class="product-card-body">
+                                <h5 class="product-card-title">SAV系列永磁变频螺杆空压机螺杆风机</h5>
+                                <p class="product-card-text">精准控制电机转速，实现按需供能，节能率可达40%。</p>
+                                <a href="product-detail.html" class="btn btn-primary w-100">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="product-card">
+                            <img src="assets/image/RENTAL_VSV01__去背圖_002.png" class="card-img-top product-card-img"
+                                alt="节能产品3">
+                            <div class="product-card-body">
+                                <h5 class="product-card-title">永磁变频油螺杆真空泵螺杆真空泵</h5>
+                                <p class="product-card-text">回收工业废热，转化为可用能源，综合节能效益显著。</p>
+                                <a href="product-detail.html" class="btn btn-primary w-100">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <img src="assets/image/pro.jpg" alt="公司简介" class="img-fluid rounded">
+                <div class="text-center mt-4">
+                    <a href="products.html" class="btn btn-accent btn-lg">浏览全部产品</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 产品展示 -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">产品中心</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="assets/image/Air_Compressor__去背圖_.png" class="card-img-top product-card-img"
-                            alt="节能产品1">
-                        <div class="product-card-body">
-                            <h5 class="product-card-title">SWTII-SWTIII系列无油螺杆空压机</h5>
-                            <p class="product-card-text">采用先进电磁设计，能效等级达到IE4标准，节能效果显著。</p>
-                            <a href="product-detail.html" class="btn btn-primary w-100">查看详情</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="assets/image/RENTAL_BWV01__去背圖_002.png" class="card-img-top product-card-img"
-                            alt="节能产品2">
-                        <div class="product-card-body">
-                            <h5 class="product-card-title">SAV系列永磁变频螺杆空压机螺杆风机</h5>
-                            <p class="product-card-text">精准控制电机转速，实现按需供能，节能率可达40%。</p>
-                            <a href="product-detail.html" class="btn btn-primary w-100">查看详情</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="assets/image/RENTAL_VSV01__去背圖_002.png" class="card-img-top product-card-img"
-                            alt="节能产品3">
-                        <div class="product-card-body">
-                            <h5 class="product-card-title">永磁变频油螺杆真空泵螺杆真空泵</h5>
-                            <p class="product-card-text">回收工业废热，转化为可用能源，综合节能效益显著。</p>
-                            <a href="product-detail.html" class="btn btn-primary w-100">查看详情</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="products.html" class="btn btn-accent btn-lg">浏览全部产品</a>
-            </div>
-        </div>
-    </section>
+        <section class="news-columns">
+            <div class="container">
+                <h2 class="section-title text-center">新闻资讯</h2>
+                <div class="row row-equal-height">
 
-    <section class="news-columns">
-        <div class="container">
-            <h2 class="section-title text-center">新闻资讯</h2>
-            <div class="row row-equal-height">
-                
-                <!-- 第一列：技术文章 -->
-                <div class="col-md-4">
-                    <div class="news-column-container">
-                        <h3 class="news-column-title">技术文章</h3>
-                        <div class="news-list">
-                            <div class="news-item with-image">
-                                <div class="news-image">
-                                    <img src="https://via.placeholder.com/80x60?text=技术1" alt="永磁变频技术">
+                    <!-- 第一列：技术文章 -->
+                    <div class="col-md-4">
+                        <div class="news-column-container">
+                            <h3 class="news-column-title">技术文章</h3>
+                            <div class="news-list">
+                                <div class="news-item with-image">
+                                    <div class="news-image">
+                                        <img src="https://via.placeholder.com/80x60?text=技术1" alt="永磁变频技术">
+                                    </div>
+                                    <div class="news-content">
+                                        <a href="#" class="news-title">永磁变频技术在空压机系统中的应用与节能分析</a>
+                                        <span class="news-date">2023-11-20</span>
+                                    </div>
                                 </div>
-                                <div class="news-content">
-                                    <a href="#" class="news-title">永磁变频技术在空压机系统中的应用与节能分析</a>
-                                    <span class="news-date">2023-11-20</span>
+                                <div class="news-item with-image">
+                                    <div class="news-image">
+                                        <img src="https://via.placeholder.com/80x60?text=技术2" alt="余热回收">
+                                    </div>
+                                    <div class="news-content">
+                                        <a href="#" class="news-title">工业余热回收系统的设计与优化方案探讨</a>
+                                        <span class="news-date">2023-11-15</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="news-item with-image">
-                                <div class="news-image">
-                                    <img src="https://via.placeholder.com/80x60?text=技术2" alt="余热回收">
+                                <div class="news-item with-image">
+                                    <div class="news-image">
+                                        <img src="https://via.placeholder.com/80x60?text=技术3" alt="螺杆压缩机">
+                                    </div>
+                                    <div class="news-content">
+                                        <a href="#" class="news-title">螺杆压缩机能效提升的关键技术研究</a>
+                                        <span class="news-date">2023-11-08</span>
+                                    </div>
                                 </div>
-                                <div class="news-content">
-                                    <a href="#" class="news-title">工业余热回收系统的设计与优化方案探讨</a>
-                                    <span class="news-date">2023-11-15</span>
-                                </div>
-                            </div>
-                            <div class="news-item with-image">
-                                <div class="news-image">
-                                    <img src="https://via.placeholder.com/80x60?text=技术3" alt="螺杆压缩机">
-                                </div>
-                                <div class="news-content">
-                                    <a href="#" class="news-title">螺杆压缩机能效提升的关键技术研究</a>
-                                    <span class="news-date">2023-11-08</span>
-                                </div>
-                            </div>
-                            <div class="news-item with-image">
-                                <div class="news-image">
-                                    <img src="https://via.placeholder.com/80x60?text=技术4" alt="智能制造">
-                                </div>
-                                <div class="news-content">
-                                    <a href="#" class="news-title">智能制造在节能设备生产中的应用实践</a>
-                                    <span class="news-date">2023-10-30</span>
+                                <div class="news-item with-image">
+                                    <div class="news-image">
+                                        <img src="https://via.placeholder.com/80x60?text=技术4" alt="智能制造">
+                                    </div>
+                                    <div class="news-content">
+                                        <a href="#" class="news-title">智能制造在节能设备生产中的应用实践</a>
+                                        <span class="news-date">2023-10-30</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="more-link">
-                            <a href="#">更多技术文章 <i class="fas fa-angle-right"></i></a>
+                            <div class="more-link">
+                                <a href="#">更多技术文章 <i class="fas fa-angle-right"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- 第二列：热门新闻 -->
-                <div class="col-md-4">
-                    <div class="news-column-container">
-                        <h3 class="news-column-title">热门新闻</h3>
-                        <div class="news-list">
-                            <div class="news-item with-image">
-                                <div class="news-image">
-                                    <img src="https://via.placeholder.com/80x60?text=新闻1" alt="获奖新闻">
+
+                    <!-- 第二列：热门新闻 -->
+                    <div class="col-md-4">
+                        <div class="news-column-container">
+                            <h3 class="news-column-title">热门新闻</h3>
+                            <div class="news-list">
+                                <div class="news-item with-image">
+                                    <div class="news-image">
+                                        <img src="https://via.placeholder.com/80x60?text=新闻1" alt="获奖新闻">
+                                    </div>
+                                    <div class="news-content">
+                                        <a href="#" class="news-title">湖南宏通复盛节能科技荣获2023年度"绿色制造示范企业"称号</a>
+                                        <span class="news-date">2023-11-18</span>
+                                    </div>
                                 </div>
-                                <div class="news-content">
-                                    <a href="#" class="news-title">湖南宏通复盛节能科技荣获2023年度"绿色制造示范企业"称号</a>
-                                    <span class="news-date">2023-11-18</span>
+                                <div class="news-item with-image">
+                                    <div class="news-image">
+                                        <img src="https://via.placeholder.com/80x60?text=新闻2" alt="工业博览会">
+                                    </div>
+                                    <div class="news-content">
+                                        <a href="#" class="news-title">公司参加第24届中国国际工业博览会，展示最新节能技术成果</a>
+                                        <span class="news-date">2023-11-10</span>
+                                    </div>
+                                </div>
+                                <div class="news-item with-image">
+                                    <div class="news-image">
+                                        <img src="https://via.placeholder.com/80x60?text=新闻3" alt="合作协议">
+                                    </div>
+                                    <div class="news-content">
+                                        <a href="#" class="news-title">湖南宏通复盛与中南大学签署产学研战略合作协议</a>
+                                        <span class="news-date">2023-10-28</span>
+                                    </div>
+                                </div>
+                                <div class="news-item with-image">
+                                    <div class="news-image">
+                                        <img src="https://via.placeholder.com/80x60?text=新闻4" alt="中标项目">
+                                    </div>
+                                    <div class="news-content">
+                                        <a href="#" class="news-title">公司成功中标XX集团大型节能改造项目，合同金额达1.2亿元</a>
+                                        <span class="news-date">2023-10-15</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="news-item with-image">
-                                <div class="news-image">
-                                    <img src="https://via.placeholder.com/80x60?text=新闻2" alt="工业博览会">
-                                </div>
-                                <div class="news-content">
-                                    <a href="#" class="news-title">公司参加第24届中国国际工业博览会，展示最新节能技术成果</a>
-                                    <span class="news-date">2023-11-10</span>
-                                </div>
+                            <div class="more-link">
+                                <a href="#">更多新闻 <i class="fas fa-angle-right"></i></a>
                             </div>
-                            <div class="news-item with-image">
-                                <div class="news-image">
-                                    <img src="https://via.placeholder.com/80x60?text=新闻3" alt="合作协议">
-                                </div>
-                                <div class="news-content">
-                                    <a href="#" class="news-title">湖南宏通复盛与中南大学签署产学研战略合作协议</a>
-                                    <span class="news-date">2023-10-28</span>
-                                </div>
-                            </div>
-                            <div class="news-item with-image">
-                                <div class="news-image">
-                                    <img src="https://via.placeholder.com/80x60?text=新闻4" alt="中标项目">
-                                </div>
-                                <div class="news-content">
-                                    <a href="#" class="news-title">公司成功中标XX集团大型节能改造项目，合同金额达1.2亿元</a>
-                                    <span class="news-date">2023-10-15</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="more-link">
-                            <a href="#">更多新闻 <i class="fas fa-angle-right"></i></a>
                         </div>
                     </div>
-                </div>
-                
-                <!-- 第三列：活动 + 企业荣耀 -->
-                <div class="col-md-4">
-                    <div class="news-column-container">
-                        <div class="third-column-content">
-                            <!-- 上部：企业活动 -->
-                            <div class="sub-section with-border">
-                                <h3 class="news-column-title">企业活动</h3>
-                                <div class="news-list">
-                                    <div class="news-item with-image">
-                                        <div class="news-image">
-                                            <img src="https://via.placeholder.com/80x60?text=活动1" alt="技术研讨会">
+
+                    <!-- 第三列：活动 + 企业荣耀 -->
+                    <div class="col-md-4">
+                        <div class="news-column-container">
+                            <div class="third-column-content">
+                                <!-- 上部：企业活动 -->
+                                <div class="sub-section with-border">
+                                    <h3 class="news-column-title">企业活动</h3>
+                                    <div class="news-list">
+                                        <div class="news-item with-image">
+                                            <div class="news-image">
+                                                <img src="https://via.placeholder.com/80x60?text=活动1" alt="技术研讨会">
+                                            </div>
+                                            <div class="news-content">
+                                                <a href="#" class="news-title">2023年节能技术研讨会将于12月在北京举行</a>
+                                                <span class="news-date">2023-11-25</span>
+                                            </div>
                                         </div>
-                                        <div class="news-content">
-                                            <a href="#" class="news-title">2023年节能技术研讨会将于12月在北京举行</a>
-                                            <span class="news-date">2023-11-25</span>
+                                        <div class="news-item with-image">
+                                            <div class="news-image">
+                                                <img src="https://via.placeholder.com/80x60?text=活动2" alt="开放日">
+                                            </div>
+                                            <div class="news-content">
+                                                <a href="#" class="news-title">公司举办"绿色制造与可持续发展"主题开放日活动</a>
+                                                <span class="news-date">2023-11-12</span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="news-item with-image">
-                                        <div class="news-image">
-                                            <img src="https://via.placeholder.com/80x60?text=活动2" alt="开放日">
+                                </div>
+
+                                <!-- 下部：企业荣耀 -->
+                                <div class="sub-section">
+                                    <h3 class="news-column-title">企业荣耀</h3>
+                                    <div class="news-list">
+                                        <div class="news-item with-image">
+                                            <div class="news-image">
+                                                <img src="https://via.placeholder.com/80x60?text=荣誉1" alt="领军企业">
+                                            </div>
+                                            <div class="news-content">
+                                                <a href="#" class="news-title">2023年中国节能环保产业领军企业</a>
+                                                <span class="news-date">2023-10-15</span>
+                                            </div>
                                         </div>
-                                        <div class="news-content">
-                                            <a href="#" class="news-title">公司举办"绿色制造与可持续发展"主题开放日活动</a>
-                                            <span class="news-date">2023-11-12</span>
+                                        <div class="news-item with-image">
+                                            <div class="news-image">
+                                                <img src="https://via.placeholder.com/80x60?text=荣誉2" alt="高新技术">
+                                            </div>
+                                            <div class="news-content">
+                                                <a href="#" class="news-title">国家高新技术企业认证</a>
+                                                <span class="news-date">2023-09-28</span>
+                                            </div>
+                                        </div>
+                                        <div class="news-item with-image">
+                                            <div class="news-image">
+                                                <img src="https://via.placeholder.com/80x60?text=荣誉3" alt="ISO认证">
+                                            </div>
+                                            <div class="news-content">
+                                                <a href="#" class="news-title">ISO 50001能源管理体系认证</a>
+                                                <span class="news-date">2023-08-10</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- 下部：企业荣耀 -->
-                            <div class="sub-section">
-                                <h3 class="news-column-title">企业荣耀</h3>
-                                <div class="news-list">
-                                    <div class="news-item with-image">
-                                        <div class="news-image">
-                                            <img src="https://via.placeholder.com/80x60?text=荣誉1" alt="领军企业">
-                                        </div>
-                                        <div class="news-content">
-                                            <a href="#" class="news-title">2023年中国节能环保产业领军企业</a>
-                                            <span class="news-date">2023-10-15</span>
-                                        </div>
-                                    </div>
-                                    <div class="news-item with-image">
-                                        <div class="news-image">
-                                            <img src="https://via.placeholder.com/80x60?text=荣誉2" alt="高新技术">
-                                        </div>
-                                        <div class="news-content">
-                                            <a href="#" class="news-title">国家高新技术企业认证</a>
-                                            <span class="news-date">2023-09-28</span>
-                                        </div>
-                                    </div>
-                                    <div class="news-item with-image">
-                                        <div class="news-image">
-                                            <img src="https://via.placeholder.com/80x60?text=荣誉3" alt="ISO认证">
-                                        </div>
-                                        <div class="news-content">
-                                            <a href="#" class="news-title">ISO 50001能源管理体系认证</a>
-                                            <span class="news-date">2023-08-10</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="more-link">
+                                <a href="#">更多信息 <i class="fas fa-angle-right"></i></a>
                             </div>
-                        </div>
-                        <div class="more-link">
-                            <a href="#">更多信息 <i class="fas fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 联系我们CTA -->
-    <section class="py-5 bg-primary text-white">
-        <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-4">需要专业的节能解决方案？</h2>
-            <p class="lead mb-5">我们的专家团队将为您提供免费咨询和定制化服务</p>
-            <a href="contact.html" class="btn btn-light btn-lg me-3">立即咨询</a>
-            <a href="tel:0731-XXXXXXX" class="btn btn-outline-light btn-lg"><i class="fas fa-phone-alt me-2"></i>
-                0731-XXXXXXX</a>
-        </div>
-    </section>
-
+        <!-- 联系我们CTA -->
+        <section class="py-5 bg-primary text-white">
+            <div class="container text-center">
+                <h2 class="display-5 fw-bold mb-4">需要专业的节能解决方案？</h2>
+                <p class="lead mb-5">我们的专家团队将为您提供免费咨询和定制化服务</p>
+                <a href="contact.html" class="btn btn-light btn-lg me-3">立即咨询</a>
+                <a href="tel:0731-XXXXXXX" class="btn btn-outline-light btn-lg"><i class="fas fa-phone-alt me-2"></i>
+                    0731-XXXXXXX</a>
+            </div>
+        </section>
+    </main>
     <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h5 class="mb-4">湖南宏通复盛节能科技有限公司</h5>
-                    <p>致力于为客户提供高效、可靠的节能产品和技术服务，助力企业实现绿色发展和节能减排目标。</p>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="mb-4">快速链接</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white">首页</a></li>
-                        <li class="mb-2"><a href="about.html" class="text-white">关于我们</a></li>
-                        <li class="mb-2"><a href="products.html" class="text-white">产品中心</a></li>
-                        <li class="mb-2"><a href="news.html" class="text-white">新闻资讯</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-white">联系我们</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="mb-4">产品分类</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white">高效节能电机</a></li>
-                        <li class="mb-2"><a href="#" class="text-white">智能变频控制系统</a></li>
-                        <li class="mb-2"><a href="#" class="text-white">余热回收系统</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <h5 class="mb-4">联系我们</h5>
-                    <div>
-                        <p><i class="fas fa-map-marker-alt me-2"></i> 湖南省长沙市XX区XX路XX号</p>
-                        <p><i class="fas fa-phone-alt me-2"></i> 0731-XXXXXXX</p>
-                        <p><i class="fas fa-envelope me-2"></i> service@hongtongfs.com</p>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-4 bg-secondary">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="small mb-0">© 2023 湖南宏通复盛节能科技有限公司 版权所有</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="small mb-0">湘ICP备XXXXXXXX号</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <!-- 浮动联系按钮 -->
     <div class="floating-contact">
@@ -835,26 +339,10 @@
         </a>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // 激活轮播图自动播放
-        var myCarousel = document.querySelector('#mainCarousel')
-        var carousel = new bootstrap.Carousel(myCarousel, {
-            interval: 5000,
-            wrap: true
-        })
-
-        // 滚动时导航栏效果
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 100) {
-                document.querySelector('.navbar').classList.add('shadow-sm')
-                document.querySelector('.navbar').classList.add('bg-white')
-            } else {
-                document.querySelector('.navbar').classList.remove('shadow-sm')
-                document.querySelector('.navbar').classList.remove('bg-white')
-            }
-        })
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/mob.js"></script>
 </body>
 
 </html>

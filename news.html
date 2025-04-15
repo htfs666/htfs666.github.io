@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻资讯 - 湖南宏通复盛节能科技有限公司</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2A5CAA;
+            --secondary-color: #4D7EB8;
+            --accent-color: #FF6F00;
+        }
+        
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        /* 主视觉区 */
+        .news-hero {
+            background: linear-gradient(rgba(42, 92, 170, 0.85), rgba(42, 92, 170, 0.85)), 
+                        url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 60px;
+        }
+        
+        .news-hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        /* 新闻分类 */
+        .news-categories {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .category-link {
+            color: #555;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 30px;
+            transition: all 0.3s;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        
+        .category-link:hover, .category-link.active {
+            color: white;
+            background: var(--primary-color);
+        }
+        
+        /* 新闻内容区 */
+        .news-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-color);
+        }
+        
+        /* 新闻卡片 */
+        .news-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            margin-bottom: 30px;
+            background: white;
+            height: 100%;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .news-img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .news-body {
+            padding: 25px;
+        }
+        
+        .news-date {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .news-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .news-excerpt {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .read-more:hover {
+            color: var(--secondary-color);
+        }
+        
+        .read-more i {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* 特色新闻 */
+        .featured-news {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 500px;
+            margin-bottom: 50px;
+        }
+        
+        .featured-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .featured-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 40px;
+            color: white;
+        }
+        
+        .featured-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        /* 分页 */
+        .pagination {
+            justify-content: center;
+            margin-top: 50px;
+        }
+        
+        .page-link {
+            color: var(--primary-color);
+            border: none;
+            margin: 0 5px;
+            border-radius: 8px !important;
+        }
+        
+        .page-link:hover {
+            background: #f0f5ff;
+        }
+        
+        .page-item.active .page-link {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .news-hero {
+                clip-path: none;
+                height: 40vh;
+            }
+            
+            .news-hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .category-link {
+                margin: 5px;
+                display: inline-block;
+            }
+            
+            .featured-news {
+                height: 350px;
+            }
+            
+            .featured-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- 新闻主视觉区 -->
+    <section class="news-hero">
+        <div class="container">
+            <h1 class="news-hero-title" data-aos="fade-up">新闻资讯</h1>
+            <p data-aos="fade-up" data-aos-delay="200">了解复盛最新动态与行业资讯</p>
+        </div>
+    </section>
+
+    <!-- 新闻分类导航 -->
+    <div class="news-categories">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center">
+                <a href="#all" class="category-link active">全部新闻</a>
+                <a href="#company" class="category-link">公司动态</a>
+                <a href="#industry" class="category-link">行业资讯</a>
+                <a href="#technology" class="category-link">技术前沿</a>
+                <a href="#events" class="category-link">活动公告</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新闻内容区 -->
+    <section class="news-section">
+        <div class="container">
+            <!-- 特色新闻 -->
+            <div class="featured-news" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                     alt="特色新闻" class="featured-img">
+                <div class="featured-content">
+                    <span class="featured-badge">最新动态</span>
+                    <h2>复盛节能发布新一代智能节能系统</h2>
+                    <p class="mb-0">2023年6月15日，复盛节能科技在长沙成功举办新产品发布会...</p>
+                </div>
+            </div>
+
+            <h2 class="section-title" data-aos="fade-up">最新新闻</h2>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="news-card">
+                        <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="新闻图片" class="news-img">
+                        <div class="news-body">
+                            <div class="news-date">2023-06-10</div>
+                            <h3 class="news-title">复盛节能荣获"湖南省科技创新企业"称号</h3>
+                            <p class="news-excerpt">在近日公布的湖南省科技创新企业评选中，我公司凭借在节能技术领域的突出贡献...</p>
+                            <a href="#" class="read-more">
+                                阅读更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="news-card">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="新闻图片" class="news-img">
+                        <div class="news-body">
+                            <div class="news-date">2023-05-28</div>
+                            <h3 class="news-title">复盛与德国能源集团达成战略合作</h3>
+                            <p class="news-excerpt">5月28日，我公司与德国知名能源集团签署战略合作协议，共同开发欧洲市场...</p>
+                            <a href="#" class="read-more">
+                                阅读更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="news-card">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="新闻图片" class="news-img">
+                        <div class="news-body">
+                            <div class="news-date">2023-05-15</div>
+                            <h3 class="news-title">工业节能技术发展趋势研讨会成功举办</h3>
+                            <p class="news-excerpt">由我公司主办的2023工业节能技术发展趋势研讨会在长沙国际会展中心举行...</p>
+                            <a href="#" class="read-more">
+                                阅读更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="news-card">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="新闻图片" class="news-img">
+                        <div class="news-body">
+                            <div class="news-date">2023-04-30</div>
+                            <h3 class="news-title">复盛节能参加2023中国国际环保展</h3>
+                            <p class="news-excerpt">4月30日，我公司携最新环保技术产品参加2023中国国际环保展览会...</p>
+                            <a href="#" class="read-more">
+                                阅读更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="news-card">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="新闻图片" class="news-img">
+                        <div class="news-body">
+                            <div class="news-date">2023-04-18</div>
+                            <h3 class="news-title">智能控制系统荣获国家专利金奖</h3>
+                            <p class="news-excerpt">我公司自主研发的智能控制系统荣获第二十四届中国专利奖金奖...</p>
+                            <a href="#" class="read-more">
+                                阅读更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="news-card">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="新闻图片" class="news-img">
+                        <div class="news-body">
+                            <div class="news-date">2023-03-25</div>
+                            <h3 class="news-title">复盛节能开展春季技术培训活动</h3>
+                            <p class="news-excerpt">为提高员工技术水平，公司组织为期两周的春季技术培训活动...</p>
+                            <a href="#" class="read-more">
+                                阅读更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 分页 -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mob.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // 分类导航平滑滚动
+        $('.category-link').on('click', function(e) {
+            e.preventDefault();
+            $('.category-link').removeClass('active');
+            $(this).addClass('active');
+            
+            const target = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - 80
+            }, 800);
+        });
+    </script>
+</body>
+</html>
